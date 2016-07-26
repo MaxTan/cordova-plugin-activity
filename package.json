@@ -1,0 +1,16 @@
+{
+  "name": "cordova-plugin-activity",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "com.maxtan.ActivityPlugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": ""
+}
