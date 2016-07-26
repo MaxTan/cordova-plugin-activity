@@ -1,18 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-activity" version="0.0.1" 
+<plugin id="xyz.xyzmax.activity" version="0.0.1" 
     xmlns="http://apache.org/cordova/ns/plugins/1.0" 
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>ActivityPlugin</name>
-    <js-module name="ActivityPlugin" src="www/maxtan.activity.js">
-        <clobbers target="cordova.plugins.maxtan" />
+    <name>Activity</name>
+    <js-module name="activity" src="www/activity.js">
+        <clobbers target="cordova.plugins.activity" />
     </js-module>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="ActivityPlugin">
-                <param name="android-package" value="com.maxtan.ActivityPlugin" />
+                <param name="android-package" value="xyz.xyzmax.activity.ActivityPlugin" />
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
-        <source-file src="src/android/ActivityPlugin.java" target-dir="src/com/maxtan" />
+        <source-file src="src/android/ActivityPlugin.java" target-dir="src/xyz/xyzmax/activity" />
     </platform>
 </plugin>

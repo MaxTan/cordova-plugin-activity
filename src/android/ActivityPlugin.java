@@ -1,4 +1,4 @@
-package cordova-plugin-activity;
+package xyz.xyzmax.activity;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
