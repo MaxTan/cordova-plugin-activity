@@ -1,7 +1,10 @@
 package xyz.xyzmax.activity;
 
+import android.content.Intent;
+
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -14,9 +17,9 @@ public class ActivityPlugin extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if (action.equals("coolMethod")) {
+        if (action.equals("run")) {
             String message = args.getString(0);
-            this.coolMethod(message, callbackContext);
+            this.run(message, callbackContext);
             return true;
         }
         return false;
@@ -29,4 +32,15 @@ public class ActivityPlugin extends CordovaPlugin {
             callbackContext.error("Expected one non-empty string argument.");
         }
     }
+
+    private void run(String url, CallbackContext callbackContext) {
+        try {
+            Intent intent = Intent.getIntent(url);
+            ((CordovaActivity) this.cordova.getActivity()).startActivity(intent);
+            callbackContext.success("成功");
+        } catch (Exception e) {
+            callbackContext.error(e.getMessage()); 
+        }
+    }
+
 }
