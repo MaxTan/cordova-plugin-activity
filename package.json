@@ -3,14 +3,14 @@
   "version": "0.0.1",
   "description": "",
   "cordova": {
-    "id": "com.maxtan.ActivityPlugin",
+    "id": "cordova-plugin-activity",
     "platforms": [
       "android"
     ]
   },
   "keywords": [
-    "ecosystem:cordova",
-    "cordova-android"
+    "activity",
+    "intent"
   ],
-  "author": ""
+  "author": "max"
 }
